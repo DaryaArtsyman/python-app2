@@ -26,4 +26,4 @@ jobs:
 
       
       - name: Docker build
-        run: docker build -t DaryaArtsyman/python-app2:1.0.0 .
+        run: docker build -t daryaartsyman/python-app2:1.0.0 .
