@@ -1,29 +1,18 @@
 
-
 name: CI
 
-
 on:
-  
   push:
     branches: [ "main" ]
-  
 
-  
   workflow_dispatch:
 
-
 jobs:
- 
   build:
-    
     runs-on: ubuntu-latest
 
-    
     steps:
-     
       - uses: actions/checkout@v4
-
       
       - name: Docker build
         run: docker build -t daryaartsyman/python-app2:1.0.0 .
@@ -35,4 +24,4 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Docker Push
-        run: docker push daryaartsyman/python-app2:1.0.0  
+        run: docker push daryaartsyman/python-app2:1.0.0
